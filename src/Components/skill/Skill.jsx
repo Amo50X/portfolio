@@ -1,9 +1,9 @@
 import { Canvas, useLoader } from '@react-three/fiber';
 import './Skill.css';
-import { Float, GradientTexture, Instance, Instances, MeshDistortMaterial,MeshPortalMaterial,RoundedBox,Sparkles,Text } from '@react-three/drei';
+import { Float, MeshDistortMaterial,Sparkles,Text } from '@react-three/drei';
 import * as THREE from 'three';
 import { useState } from 'react';
-import { animated, useSpring, useSpringRef } from '@react-spring/three';
+import { animated, useSpring } from '@react-spring/three';
 
 
 

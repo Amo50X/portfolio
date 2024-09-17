@@ -1,0 +1,12 @@
+#journey{
+    background-image: linear-gradient(-135deg, #000000, rgb(0, 95, 119), #000000);
+}
+
+#journey h1{
+    padding: 10px;
+    text-align: center;
+    font-size: 4rem;
+    background: linear-gradient(135deg, #00a8be 48%,  #ff00ea 55%);
+    color: transparent;
+    background-clip: text;
+}

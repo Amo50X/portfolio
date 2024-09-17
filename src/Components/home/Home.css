@@ -1,0 +1,50 @@
+.home-section{
+    background: linear-gradient( #0c0c0c, #002941);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 5rem;
+    background: linear-gradient(135deg, #00a8be 33%, #ff00ea 50%);
+    color: transparent;
+    background-clip: text;
+}
+.logo{
+    padding: 0.7rem;
+    position: absolute;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.home h1 {
+    font-size: 3.5rem;
+}
+
+.home h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.home h3 {
+    font-size: 2rem;
+}
+
+.home a {
+    color: #00a8be ;
+    font-size: xx-large;
+    margin-right: 1rem;
+}
+
+.home a:hover {
+    opacity: 0.8;
+}
+
+.home img {
+    width: 400px;
+    border-radius: 30px;
+}

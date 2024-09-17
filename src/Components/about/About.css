@@ -1,0 +1,41 @@
+.about-section {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.253) 7%, rgb(15, 15, 15) 80%);
+
+
+}
+
+.about{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    text-align: center;
+}
+
+
+.about h1{
+    padding: 5rem;
+    font-size: 4rem;
+    background: linear-gradient(135deg, #00a8be 48%,  #ff00ea 55%);
+    color: transparent;
+    background-clip: text;
+}
+
+.about img{
+    width: 250px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #00a8be;
+    box-shadow: 1px 1px 12px #00a8be;
+}
+
+
+.about p{
+    font-weight: 300;
+    font-size: 2rem;
+    padding: 2rem 200px;
+    background: radial-gradient(circle, rgba(255,0,234,1) 7%, rgba(0,168,190,1) 70%);
+    color: transparent;
+    background-clip: text;
+}

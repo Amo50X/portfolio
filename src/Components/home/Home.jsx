@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <section className="home-section">
         <div className="logo">
-          <img src="src/assets/logo.png" alt="" />
+          <img src="./images/logo.png" alt="" />
         </div>
         <motion.div className='home'
           initial={{scale:0}}
@@ -34,7 +34,7 @@ const Home = () => {
                 </div>
             </div>
             <motion.div ref={constraintRef} style={{padding: "1px"}}>
-                <motion.img src="src/assets/me2.jpg" alt="" 
+                <motion.img src="./images/me2.jpg" alt="" 
                   drag
                   dragConstraints={constraintRef}
                   dragTransition={{ bounceStiffness: 600, bounceDamping: 10}}

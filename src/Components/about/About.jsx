@@ -10,7 +10,7 @@ const About = () => {
             <h1>About Me</h1>
             <div className='about-content'>
                 
-                <motion.img src="src/assets/me.jpg" alt="" 
+                <motion.img src="./images/me.jpg" alt="" 
                   whileTap={{rotateY: "180deg"}}
                   whileHover={{scale:0.8}}
                 />

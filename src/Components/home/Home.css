@@ -48,3 +48,22 @@
     width: 400px;
     border-radius: 30px;
 }
+
+.cv {
+    margin-top: 5px;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #00a8be , #ff00ea );
+    color: white;
+    border-style: none;
+    font-size: large;
+    transition: 0.8s;
+}
+
+.cv:hover{
+    background: transparent;
+    border-style: solid;
+    border-color: #00a8be;
+    color: #00a8be;
+    border-radius: 1rem;
+}

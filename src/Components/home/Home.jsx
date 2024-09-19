@@ -28,16 +28,17 @@ const Home = () => {
                 <h1>I'm Amogelang Sibanda</h1>
                 <h2>A Graphic Designer</h2>
                 <div>
-                  <a href=""><FaFacebook/></a>
-                  <a href=""><FaGithub/></a>
-                  <a href=""><FaLinkedin/></a>
+                  <a href="https://www.facebook.com/amo50x"><FaFacebook/></a>
+                  <a href="https://github.com/Amo50X"><FaGithub/></a>
+                  <a href="https://linkedin.com/in/amogelang-sibanda-973657184"><FaLinkedin/></a>
                 </div>
+                <a href="https://linkedin.com/in/amogelang-sibanda-973657184"><button className="cv">Download CV</button></a>
             </div>
             <motion.div ref={constraintRef} style={{padding: "1px"}}>
                 <motion.img src="./images/me2.jpg" alt="" 
                   drag
                   dragConstraints={constraintRef}
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 10}}
+                  dragTransition={{ bounceStiffness: 1000, bounceDamping: 15}}
                 />
             </motion.div>
         </motion.div>

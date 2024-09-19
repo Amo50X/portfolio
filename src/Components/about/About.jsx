@@ -11,8 +11,16 @@ const About = () => {
             <div className='about-content'>
                 
                 <motion.img src="./images/me.jpg" alt="" 
+                  initial={{borderRadius: "50%"}}
                   whileTap={{rotateY: "180deg"}}
-                  whileHover={{scale:0.8}}
+                  whileHover={
+                    {scale : 0.8}
+                  }
+                  whileInView={
+                    {borderRadius: ['50%','0','50%'],
+                      rotateZ: ['90deg', '180deg', '0']
+                    }
+                  }
                 />
             
                 <p> 

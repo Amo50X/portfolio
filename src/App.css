@@ -14,7 +14,7 @@ body {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
 }
 .progress{
     position: fixed;
@@ -22,4 +22,8 @@ section {
     width: 100%;
     background-image: linear-gradient(135deg, #00a8be, #ff00ea);
     z-index: 2;
+}
+
+@media (max-width: 417px) {
+
 }

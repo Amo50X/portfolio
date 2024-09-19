@@ -4,6 +4,8 @@ import Models from "./Models"
 import { FaS } from "react-icons/fa6"
 
 const Scene = () => {
+  const scaleFactor = window.innerWidth  / 1300;
+  console.log(scaleFactor)
   return (
     <>
 
@@ -20,9 +22,9 @@ const Scene = () => {
               minPolarAngle={Math.PI * 1/2}
 
             /> */}
-            <ambientLight intensity={2}/>
-            <group position={[0,0,0]}>
-
+            
+            <group position={[0,0,0]} scale={scaleFactor}>
+              <ambientLight intensity={2}/>
               <Models/>
             </group>
             

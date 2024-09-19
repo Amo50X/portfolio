@@ -50,7 +50,49 @@
 }
 .journey .vr {
     background: linear-gradient( #00a8be,  #ff00ea );
-    width: 2px;
+    width: 3px;
     height: 30rem;
     margin-right: 10px;
+}
+
+@media (max-width: 714px) {
+    .journey h2{
+        font-size: 2.2rem;
+    }
+    .journey .vr {
+        display: none;
+    }
+
+    .journey h3{
+        font-size: 1.4rem;
+    }
+    .journey p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 547px) {
+    .journey{
+        display: block;
+        padding: 0.5rem;
+    }
+    .journey{
+        display: block;
+        padding: 0.5rem;
+    }
+    .journey ul li::marker{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 417px) {
+    #journey h1{
+        font-size: xx-large;
+    }
+    .journey{
+        display: block;
+        padding: 0.5rem;
+    }
+
+    
 }

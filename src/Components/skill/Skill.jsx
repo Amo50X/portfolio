@@ -18,9 +18,12 @@ const Skill = () => {
   const pythonTexture = useLoader(THREE.TextureLoader, './texture/python_logo.png');
   const cPlusTexture = useLoader(THREE.TextureLoader, './texture/Cplus_logo.png');
   const cSharpTexture = useLoader(THREE.TextureLoader, './texture/Csharp_logo.png');
+  const scaleFactor = window.innerWidth  / 1300;
+  console.log(scaleFactor)
 
   function LogoSkill ({position, texture, text}) {
     const [hover, setHover] = useState(false)
+    
 
     const spring = useSpring({
       from: {
@@ -73,45 +76,29 @@ const Skill = () => {
   return (
     <section id='skills'>
       <Canvas>
-        
-        <ambientLight intensity={2}/>
-        <Text
-          position-y={2.5}
-          color={"#00a8be"}
-          font='./fonts/Roboto-Bold.ttf'
-        >
-          Skills
-        </Text>
-        <group position-y={-1}>
-          <LogoSkill position={[-4,2,0]} texture={htmlTexture} text={'HTML'} />
-          <LogoSkill position={[-2,2,0]} texture={cssTexture} text={'CSS'} />
-          <LogoSkill position={[0,2,0]} texture={jsTexture} text={'Javascript'} />
-          <LogoSkill position={[2,2,0]} texture={reactTexture} text={'React JS'} />
-          <LogoSkill position={[4,2,0]} texture={bootTexture} text={'Bootstrap'} />
+        <group scale={scaleFactor}>
+          <ambientLight intensity={2}/>
+          <Text
+            position-y={2.5}
+            color={"#00a8be"}
+            font='./fonts/Roboto-Bold.ttf'
+          >
+            Skills
+          </Text>
+          <group position-y={-1} scale={1}>
+            <LogoSkill position={[-4,2,0]} texture={htmlTexture} text={'HTML'} />
+            <LogoSkill position={[-2,2,0]} texture={cssTexture} text={'CSS'} />
+            <LogoSkill position={[0,2,0]} texture={jsTexture} text={'Javascript'} />
+            <LogoSkill position={[2,2,0]} texture={reactTexture} text={'React JS'} />
+            <LogoSkill position={[4,2,0]} texture={bootTexture} text={'Bootstrap'} />
 
-          <LogoSkill position={[-4,0,0]} texture={blenderTexture} text={'Blender 3D'} />
-          <LogoSkill position={[-2,0,0]} texture={unityTexture} text={'Unity'} />
-          <LogoSkill position={[0,0,0]} texture={pythonTexture} text={'Python'} />
-          <LogoSkill position={[2,0,0]} texture={cPlusTexture} text={'C++'} />
-          <LogoSkill position={[4,0,0]} texture={cSharpTexture} text={'C#'} />
+            <LogoSkill position={[-4,0,0]} texture={blenderTexture} text={'Blender 3D'} />
+            <LogoSkill position={[-2,0,0]} texture={unityTexture} text={'Unity'} />
+            <LogoSkill position={[0,0,0]} texture={pythonTexture} text={'Python'} />
+            <LogoSkill position={[2,0,0]} texture={cPlusTexture} text={'C++'} />
+            <LogoSkill position={[4,0,0]} texture={cSharpTexture} text={'C#'} />
+          </group>
         </group>
-
-        {/* <Instances
-          limit={100}
-          range={100}
-          position-z={0}
-        >
-          <sphereGeometry/>
-          <meshNormalMaterial/>
-          <Instance 
-            color="red"
-            scale={1}
-            rotation={[Math.PI / 3, 0, 0]}
-          />
-
-        </Instances> */}
-
-        
         
       </Canvas>
     </section>

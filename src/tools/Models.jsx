@@ -64,7 +64,7 @@ const Models = () => {
         >
           <mesh
             scale={MathUtils.randFloat(0.25, 0.5)}
-            position={[MathUtils.randFloat(-10, 10), MathUtils.randFloat(-5, 5), MathUtils.randFloat(-5, 5)]}
+            position={[MathUtils.randFloat(-10, 10), MathUtils.randFloat(-8, 8), MathUtils.randFloat(-8, 8)]}
             geometry={prop.geometry}
             material={material}
           />

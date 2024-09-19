@@ -36,3 +36,29 @@
     color: transparent;
     background-clip: text;
 }
+@media (max-width: 1300px) {
+    .about p{
+        font-size: 1.8rem;
+        padding: 2rem 2rem;
+    }
+}
+@media (max-width: 714px) {
+    .about p{
+        font-size: 1.4rem;
+        padding: 2rem 2rem;
+    }
+}
+
+@media (max-width: 417px) {
+    .about h1{
+        font-size: xx-large;
+    }
+    .about p{
+        font-size: medium;
+        padding: 2rem 10px;
+    }
+    .about img{
+        width: 200px;
+    }
+}
+

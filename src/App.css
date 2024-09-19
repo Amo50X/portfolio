@@ -16,23 +16,6 @@ body {
 section {
     height: 100vh;
 }
-
-.mini-nav{
-    position: fixed;
-    display: inline;
-    transform: translateY(-50%);
-    top: 50%;
-    left: 5%;
-}
-
-.mini-nav div {
-    background-color: #009efa;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 50%;
-    opacity: 0.7;
-}
-
 .progress{
     position: fixed;
     height: 10px;

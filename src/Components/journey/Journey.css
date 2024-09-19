@@ -1,12 +1,56 @@
 #journey{
     background-image: linear-gradient(-135deg, #000000, rgb(0, 95, 119), #000000);
+    padding: 3rem;
 }
 
 #journey h1{
-    padding: 10px;
+    padding: 2rem;
     text-align: center;
     font-size: 4rem;
     background: linear-gradient(135deg, #00a8be 48%,  #ff00ea 55%);
     color: transparent;
     background-clip: text;
+}
+
+.journey{
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.journey ul{
+    margin-top: 1rem;
+}
+
+.journey ul li{
+    margin-top: 1.4em;
+}
+.journey ul li::marker{
+    color: #00a8be;
+    font-size: 2rem;
+}
+.journey h2{
+    font-size: 3rem;
+    background: linear-gradient(135deg, #00a8be,  #ff00ea );
+    color: transparent;
+    background-clip: text;
+}
+
+.journey h3{
+    /* text-decoration: underline; */
+    font-size: 1.8rem;
+    color: #00a8be;
+}
+
+.journey p{
+    color:  #b7b7b7;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+.journey .vr {
+    background: linear-gradient( #00a8be,  #ff00ea );
+    width: 2px;
+    height: 30rem;
+    margin-right: 10px;
 }

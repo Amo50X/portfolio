@@ -21,13 +21,6 @@ function App() {
         <motion.div className='progress'
             style={{scaleX}}
         />
-        <div className="mini-nav">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
        <Nav/>
        <Home/>
        <About/>

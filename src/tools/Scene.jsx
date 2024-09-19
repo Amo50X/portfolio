@@ -4,7 +4,7 @@ import Models from "./Models"
 import { FaS } from "react-icons/fa6"
 
 const Scene = () => {
-  const scaleFactor = window.innerWidth  / 1300;
+  const scaleFactor = Math.min( Math.max(window.innerWidth  / 1300, 0.5) , 1);
   console.log(scaleFactor)
   return (
     <>

@@ -18,7 +18,7 @@ const Skill = () => {
   const pythonTexture = useLoader(THREE.TextureLoader, './texture/python_logo.png');
   const cPlusTexture = useLoader(THREE.TextureLoader, './texture/Cplus_logo.png');
   const cSharpTexture = useLoader(THREE.TextureLoader, './texture/Csharp_logo.png');
-  const scaleFactor = window.innerWidth  / 1300;
+  const scaleFactor = Math.min( Math.max(window.innerWidth  / 1300, 0.5) , 1.2);
   console.log(scaleFactor)
 
   function LogoSkill ({position, texture, text}) {

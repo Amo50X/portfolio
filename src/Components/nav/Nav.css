@@ -35,10 +35,6 @@ nav a.active{
 }
 @media (max-width: 417px) {
     nav {
-        position: fixed;
-        padding: 0.1rem 0.7rem;
         bottom: 1rem;
-        left: 9%;
-        transform: translateX(0);
     }
 }

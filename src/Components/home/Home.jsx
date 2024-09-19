@@ -32,13 +32,17 @@ const Home = () => {
                   <a href="https://github.com/Amo50X"><FaGithub/></a>
                   <a href="https://linkedin.com/in/amogelang-sibanda-973657184"><FaLinkedin/></a>
                 </div>
-                <a href="https://linkedin.com/in/amogelang-sibanda-973657184"><button className="cv">Download CV</button></a>
+                <a href="./AJ Sibanda CV 2024.pdf"><button className="cv">Download CV</button></a>
             </div>
             <motion.div ref={constraintRef} style={{padding: "1px"}}>
                 <motion.img src="./images/me2.jpg" alt="" 
-                  drag
-                  dragConstraints={constraintRef}
-                  dragTransition={{ bounceStiffness: 1000, bounceDamping: 15}}
+                  initial={{
+                    borderRadius:"30px"
+                  }}
+                  whileHover={{
+                    borderRadius: ['30px','0','0','30px'],
+                    scale: [1,0.9,0.9,1]
+                  }}
                 />
             </motion.div>
         </motion.div>

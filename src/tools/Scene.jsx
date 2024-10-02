@@ -1,5 +1,4 @@
 import { Canvas } from "@react-three/fiber"
-import './Scene.css'
 import Models from "./Models"
 import { FaS } from "react-icons/fa6"
 

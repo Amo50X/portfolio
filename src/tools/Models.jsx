@@ -1,10 +1,11 @@
-import { Float,Grid,AccumulativeShadows, RandomizedLight ,MeshDistortMaterial,Text, Stars, PresentationControls } from "@react-three/drei"
-import { useMemo, memo } from 'react'
+import { Float,Grid,AccumulativeShadows, RandomizedLight ,MeshDistortMaterial,Text, Stars, PresentationControls, useVideoTexture } from "@react-three/drei"
+import { useMemo, memo, Suspense } from 'react'
 import { useLoader } from "@react-three/fiber";
 import * as THREE from 'three';
 import { MathUtils } from 'three'
 import { useState } from "react";
 import { animated, useSpring } from "@react-spring/three";
+import { useNavigate } from "react-router-dom";
 
 
 const geometries = [
@@ -19,19 +20,22 @@ const geometries = [
   { geometry: new THREE.BoxGeometry(1, 1, 1) },
 ]
 
-const Experience = ({name,texture, positionX}) => {
+const Experience = ({name,texture,url, positionX, path}) => {
   const [hover, setHover] = useState(false)
+  let navigate = useNavigate();
+  const routeChange = (path) => {
+    navigate(path)
+  }
 
-    const spring = useSpring({
-      from: {
-        scale: hover ? 3 : 3.5,
-      },
-      to: {
-        scale: hover ? 3.5 : 3,
-      }
-    })
+  const spring = useSpring({
+    from: {
+      scale: hover ? 4 : 5,
+    },
+    to: {
+      scale: hover ? 5 : 4,
+    }
+  })
   return (
-    
     <animated.mesh 
         onPointerEnter={() => setHover(true)}
         onPointerLeave={() => setHover(false)}
@@ -39,9 +43,15 @@ const Experience = ({name,texture, positionX}) => {
         position-x={positionX} 
         castShadow 
         receiveShadow
+        onClick={() => routeChange(path)}
       >
         <planeGeometry args={[1,1,32,32]}/>
-        <MeshDistortMaterial map={texture} transparent opacity={0.8}/>
+        <Suspense
+        fallback={<MeshDistortMaterial map={texture} transparent opacity={0.8}/>}
+        >
+          <VideoMaterial src={url} start={hover}/>
+        </Suspense>
+        
         <Text position-y={-0.6} scale={0.1} color={'#00a8be'}>{name}</Text>
       </animated.mesh>
   )
@@ -94,10 +104,10 @@ const Models = () => {
         <Geometries/>
       </PresentationControls>
       
-      <Float>       
-        <Experience name={"3D Models"} texture={modelTexture} positionX={0}/>
-        <Experience name={"Games"} texture={gameTexture} positionX={-5}/>
-        <Experience name={"AI"} texture={aiTexture} positionX={5}/>  
+      <Float>     
+        <Experience name={"3D Models"} url={"./video/model.mp4"} texture={modelTexture} positionX={0} path={'/model'}/>
+        <Experience name={"Games"} url={"./video/games.mp4"} texture={gameTexture} positionX={-6}  path={'/games'}/>
+        <Experience name={"AI"} url={"./video/ai.mp4"} texture={aiTexture} positionX={6}  path={'/ai'}/>  
       </Float>
       <Ground/>
       <Shadows/>
@@ -106,6 +116,15 @@ const Models = () => {
 }
 
 export default Models
+
+function VideoMaterial({src,start}){
+  const texture = useVideoTexture(src)
+  texture.wrapS = THREE.RepeatWrapping
+  texture.wrapT = THREE.RepeatWrapping
+  texture.repeat.x = 1
+  texture.offset.x = 1
+  return <MeshDistortMaterial side={THREE.DoubleSide} map={texture} toneMapped={false} transparent opacity={start ? 1:  0.7} speed={3}  />
+}
 
 function Ground() {
   const gridConfig = {

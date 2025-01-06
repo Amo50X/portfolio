@@ -27,3 +27,39 @@ section {
 @media (max-width: 417px) {
 
 }
+.bg_video{
+    position: fixed;
+    width: 100%;
+
+}
+
+.load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100vh;
+    gap: 3rem;
+    background-image: linear-gradient(90deg, #7a7979, #018ab4);
+}
+
+.load img{
+    width: 200px;
+    height: 200px;
+}
+
+.load h1{
+    font-size: 3rem;
+}
+
+.design p{
+    padding: 2rem;
+    position: absolute;
+    width: 900px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #00bdd6;
+    background-image: linear-gradient(135deg, #7a7979a6 30%, #018ab4c7 90%);
+    border-radius: 30px;
+}
